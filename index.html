@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ingeniería Cargo | Servicios de Tecnología e Infraestructura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F8;--surface:#FFFFFF;--ink:#1F2A44;--muted:#566075;--line:#D5DAE3;--accent:#F2B705;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121826;--surface:#1B2336;--ink:#EEF1F6;--muted:#A3ADC2;--line:#2C3650;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121826;--surface:#1B2336;--ink:#EEF1F6;--muted:#A3ADC2;--line:#2C3650;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:18px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:700 26px/1 "Barlow Condensed",sans-serif}
+.brand b{font:700 22px/1.1 "Barlow Condensed",sans-serif;letter-spacing:.02em;display:block}
+.brand small{display:block;font-size:13px;color:var(--muted);line-height:1.2}
+nav{display:flex;gap:20px;font-weight:500}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:6px}
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+h1{font:700 clamp(40px,6.4vw,76px)/1 "Barlow Condensed",sans-serif;margin:0 0 20px;letter-spacing:.005em}
+.hero .wrap>div:first-child{text-align:center}
+.hero p{max-width:46ch;color:var(--muted);margin:0 auto 28px}
+.btn{display:inline-block;background:var(--accent);color:#1F2A44;font-weight:500;text-decoration:none;padding:14px 26px;border-radius:4px}
+.btn:hover{filter:brightness(.95)}
+.stack{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(84px,auto);gap:8px}
+.stack a{display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 14px;border-radius:3px;text-decoration:none;font:600 20px/1.1 "Barlow Condensed",sans-serif;background:var(--ink);color:var(--bg)}
+.stack a:hover{filter:brightness(.92)}
+.stack a:nth-child(1){grid-column:span 2}
+.stack a:nth-child(2){background:var(--accent);color:#1F2A44}
+.stack a:nth-child(3){background:transparent;border:2px solid var(--ink);color:var(--ink)}
+.stack a:nth-child(4){grid-column:span 2;background:var(--surface);border:2px solid var(--line);color:var(--ink)}
+.stack a:nth-child(5){grid-column:span 3}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(30px,4vw,44px)/1.05 "Barlow Condensed",sans-serif;margin:0 0 32px;text-align:center}
+.svc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px 40px;padding:22px 0;border-bottom:1px solid var(--line);text-align:center}
+.svc:first-of-type{border-top:1px solid var(--line)}
+.svc h3{font:600 26px/1.15 "Barlow Condensed",sans-serif;margin:0}
+.svc p{margin:0;color:var(--muted)}
+.contact{background:var(--surface)}
+.contact .wrap{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:24px}
+.contact p{margin:0 auto;color:var(--muted);max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.btn.wa{background:#25D366}
+.btn.alt{background:transparent;border:2px solid var(--ink);color:var(--ink);padding:12px 24px}
+footer{padding:28px 0;text-align:center;color:var(--muted);font-size:15px}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.svc{grid-template-columns:1fr}nav{gap:14px;font-size:16px}.brand small{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Ingeniería Cargo, inicio">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3.5 9.5A12 12 0 0 1 20.5 9.5M6.5 13A8 8 0 0 1 17.5 13M9.3 16.3A4 4 0 0 1 14.7 16.3"/><circle cx="12" cy="19.6" r="1.8" fill="#F2B705" stroke="none"/></svg></span>
+      <span><b>INGENIERÍA CARGO</b><small>Servicios de Tecnología e Infraestructura</small></span>
+    </a>
+    <nav aria-label="Principal"><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></nav>
+  </div>
+</header>
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Tecnología e infraestructura que sostiene tu operación</h1>
+        <p>En Ingeniería Cargo diseñamos, instalamos y damos soporte a las redes, equipos y sistemas que tu empresa necesita para trabajar sin interrupciones.</p>
+        <a class="btn" href="#contacto">Solicitar una cotización</a>
+      </div>
+      <div class="stack" aria-label="Servicios"><a href="#redes">Redes y cableado</a><a href="#windows">Soporte en Windows</a><a href="#proyectos">Proyectos y consultoría</a><a href="#servidores">Infraestructura de servidores</a><a href="#soporte-ti">Soporte y mantenimiento de TI</a></div>
+    </div>
+  </div>
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Lo que hacemos</h2>
+      <div class="svc" id="redes"><h3>Redes y cableado estructurado</h3><p>Diseño e instalación de redes cableadas e inalámbricas para oficinas, bodegas y plantas.</p></div>
+      <div class="svc" id="servidores"><h3>Infraestructura de servidores</h3><p>Equipamiento, montaje y configuración de servidores, almacenamiento y cuartos de comunicaciones.</p></div>
+      <div class="svc" id="soporte-ti"><h3>Soporte y mantenimiento de TI</h3><p>Atención a fallas, mantenimiento preventivo y administración de equipos de cómputo.</p></div>
+      <div class="svc" id="proyectos"><h3>Proyectos y consultoría</h3><p>Planeación y ejecución de proyectos de tecnología, desde el levantamiento hasta la puesta en marcha.</p></div>
+      <div class="svc" id="windows"><h3>Soporte en Windows</h3><p>Instalación, configuración y reparación de Windows, actualizaciones, limpieza de virus y recuperación de equipos lentos o con fallas.</p></div>
+    </div>
+  </section>
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <div>
+        <h2>Hablemos de tu proyecto</h2>
+        <p>Cuéntanos qué necesitas y te respondemos con una propuesta.</p>
+        <p style="margin-top:14px">Teléfono: 639 193 0393<br>Correo: carlosgonzalez68@proton.me</p>
+      </div>
+      <div class="actions">
+        <a class="btn wa" href="https://wa.me/526391930393" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        <a class="btn alt" href="mailto:carlosgonzalez68@proton.me">Enviar correo</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Ingeniería Cargo. Servicios de Tecnología e Infraestructura.</div></footer>
+</body>
+</html>
